@@ -33,8 +33,11 @@ catch (mysqli_sql_exception $e){
         <ul id="lista">
             <?php
             $tarea=$_POST["tarea"];
-            $sql2 = "INSERT INTO usuarios(id_tarea,nombre) VALUES (null,'$tarea') from tareas";
-                echo "<li>$tarea <a>quitar</a></li>";
+            $sql = "INSERT INTO usuarios(id_tarea,nombre) VALUES (null,'$tarea') from tareas";
+            foreach ($tarea as $tarea=>$i){
+                echo "<li>$tarea <a class='menos' href='quitar.php?id=$i'>quitar</a></li>";
+                echo "<li>$tarea <a class='marcar' href='marcar.php?id=$i'>Marcar</a></li>";
+            }
             ?>
         </ul>
     </section>
