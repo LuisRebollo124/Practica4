@@ -32,7 +32,8 @@ catch (mysqli_sql_exception $e){
     <section>
         <ul id="lista">
             <?php
-
+            $tarea=$_POST["tarea"];
+                echo "<li>$tarea <a>quitar</a></li>";
             ?>
         </ul>
     </section>
