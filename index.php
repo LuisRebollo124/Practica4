@@ -33,6 +33,7 @@ catch (mysqli_sql_exception $e){
         <ul id="lista">
             <?php
             $tarea=$_POST["tarea"];
+            $sql2 = "INSERT INTO usuarios(id_tarea,nombre) VALUES (null,'$tarea') from tareas";
                 echo "<li>$tarea <a>quitar</a></li>";
             ?>
         </ul>
