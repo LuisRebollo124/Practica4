@@ -25,7 +25,7 @@ catch (mysqli_sql_exception $e){
 ?>
 <h1>Lista de tareas</h1>
 <main>
-    <form action="nueva.php" method="POST">
+    <form action="index.php" method="POST">
         <input type="text" id="tarea" name="tarea" placeholder="Nueva tarea">
         <button id="mas" class="anadir">+</button>
     </form>
